@@ -4,7 +4,7 @@ import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import { useDispatch } from "react-redux";
 import { setCameraImage } from "./features/cameraSlice";
 const videoConstraints = {
-  width: 250,
+  width: 250, //xxxxx
   height: 400,
   facingMode: "user",
 };
