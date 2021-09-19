@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
-
+import WebcamCapture from "./WebcamCapture";
 function App() {
   return (
+    // aa a a a a
     <div className="App">
       <h1> Lets build SnapChat</h1>
+      <WebcamCapture />
     </div>
   );
 }
