@@ -2,7 +2,7 @@ import React from "react";
 import "./Chat.css";
 import { Avatar } from "@material-ui/core";
 import StopRoundedIcon from "@material-ui/icons/StopRounded";
-import ReactTimeago from "react-timeago";
+import ReactTimeAgo from "react-timeago";
 import { selectImage } from "./features/appSlice";
 import { useDispatch } from "react-redux";
 import { db } from "./firebase";
@@ -32,7 +32,7 @@ function Chat({ id, username, timestamp, read, imageUrl, profilePic }) {
         <h4>{username}</h4>
         <p>
           {!read && "Tap to view ~ "}{" "}
-          <ReactTimeago date={new Date(timestamp?.toDate()).toUTCString()} />
+          <ReactTimeAgo date={new Date(timestamp?.toDate()).toUTCString()} />
         </p>
       </div>
 
