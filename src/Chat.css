@@ -16,6 +16,10 @@
 }
 
 .chat__readIcon {
+  color: #ed3b55;
+}
+
+.chat__info {
   padding-left: 5px;
   flex: 1;
 }

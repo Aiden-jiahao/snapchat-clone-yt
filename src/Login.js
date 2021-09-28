@@ -1,11 +1,12 @@
 import React from "react";
 import "./Login.css";
 import { useDispatch } from "react-redux";
+import Button from "@material-ui/core/Button";
 import { auth, provider } from "./firebase";
 import { login } from "./features/appSlice";
 function Login() {
   const dispatch = useDispatch();
-  const signIN = () => {
+  const signIn = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
@@ -26,7 +27,7 @@ function Login() {
           src="https://www.al.com/resizer/kiOENKzSGBie9je1nfC1r8lcyPM=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width2048/img/business_impact/photo/snapchat-logojpg-31d1793aa97f130a.jpg"
           alt=""
         />
-        <Button variant="outlined" onClick={signIN}>
+        <Button variant="outlined" onClick={signIn}>
           Sign in
         </Button>
       </div>

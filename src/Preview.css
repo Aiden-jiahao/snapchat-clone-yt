@@ -20,7 +20,7 @@
 }
 
 .preview__toolbarRight > .MuiSvgIcon-root {
-  font-size: 20px;
+  font-size: 20px !important;
   margin-bottom: 8px;
   cursor: pointer;
 }
@@ -29,7 +29,6 @@
   position: absolute;
   bottom: 0;
   right: -35px;
-  transform: translate(-50%, -50%);
   background-color: yellow;
   color: black;
   display: flex;

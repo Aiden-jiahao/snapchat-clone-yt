@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { resetCameraImage, selectCameraImage } from "./features/cameraSlice";
+import { resetCameraImage, selectcameraImage } from "./features/cameraSlice";
 import "./Preview.css";
 import CloseIcon from "@material-ui/icons/Close";
 import TextFieldsIcon from "@material-ui/icons/TextFields";
@@ -17,7 +17,7 @@ import { db, storage } from "./firebase";
 import firebase from "firebase";
 import { selectUser } from "./features/appSlice";
 function Preview() {
-  const cameraImage = useSelector(selectCameraImage);
+  const cameraImage = useSelector(selectcameraImage);
   const history = useHistory();
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
@@ -35,8 +35,7 @@ function Preview() {
     const id = uuid();
     const uploadTask = storage
       .ref(`posts/${id}`)
-      .putString(cameraImage, "data__url");
-
+      .putString(cameraImage, "data_url");
     uploadTask.on(
       "state_changed",
       null,
@@ -78,7 +77,7 @@ function Preview() {
       <img src={cameraImage} alt="" />
       <div onClick={sendPost} className="preview__footer">
         <h2>
-          Send now~~
+          Send now
           <SendIcon fontSize="small" className="preview__sendIcon" />
         </h2>
       </div>

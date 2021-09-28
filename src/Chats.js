@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { resetCameraImage } from "./features/cameraSlice";
 function Chats() {
-  const [posts, setPosts] = useState([]);
+  const [Posts, setPosts] = useState([]);
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -33,7 +33,6 @@ function Chats() {
     dispatch(resetCameraImage());
     history.push("/");
   };
-
   return (
     <div className="chats">
       <div className="chats__header">
@@ -49,10 +48,10 @@ function Chats() {
         <ChatBubbleIcon className="chats__chatIcon" />
       </div>
       <div className="chats__posts">
-        {posts.map(
+        {Posts.map(
           ({
             id,
-            data: { profilePic, username, timestamp, imageUrl, read },
+            data: { username, timestamp, imageUrl, read, profilePic },
           }) => (
             <Chat
               key={id}

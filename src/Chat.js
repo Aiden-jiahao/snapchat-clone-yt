@@ -20,7 +20,6 @@ function Chat({ id, username, timestamp, read, imageUrl, profilePic }) {
         },
         { merge: true }
       );
-
       history.push("/chats/view");
     }
   };
